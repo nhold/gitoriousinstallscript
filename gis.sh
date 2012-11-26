@@ -11,7 +11,8 @@
 # Nathan Hold - V2 - https://github.com/nhold/
 #	- Code cleanup
 # 	- Working with 12.04
-
+#	- Added mime types gem
+#	- Added several libs needed for gem.
 # Starts with a base 12.04 server installation, no packages/groups added during OS installation.
 # It's best to install the server, then ssh in and run the script because there's a couple of steps
 # that'll be much easier if you can copy/paste.
@@ -33,7 +34,7 @@ PACKAGES="build-essential zlib1g-dev tcl-dev libexpat-dev \
     libmysqlclient15-dev apache2-dev libonig-dev ruby-dev rubygems \
     libopenssl-ruby libdbd-mysql-ruby libmysql-ruby \
     libmagick++-dev zip unzip memcached git-core git-svn git-doc \
-    git-cvs irb"
+    git-cvs irb libxlt-dev libxml2-dev"
 
 HOSTNAME=`hostname --fqdn`
 GIT_DB_PASS="gitorious"
@@ -81,7 +82,7 @@ REALLY_GEM_UPDATE_SYSTEM=1 gem update --system
 gem install --no-ri --no-rdoc -v 0.8.7 rake && \
     gem install --no-ri --no-rdoc -v 1.1.0 daemons && \
     gem install -b --no-ri --no-rdoc \
-        rmagick stompserver passenger bundler
+        rmagick stompserver passenger bundler mime-types
 
 
 # Install sphinx search server:
