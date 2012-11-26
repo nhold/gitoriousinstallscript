@@ -34,7 +34,7 @@ PACKAGES="build-essential zlib1g-dev tcl-dev libexpat-dev \
     libmysqlclient15-dev apache2-dev libonig-dev ruby-dev rubygems \
     libopenssl-ruby libdbd-mysql-ruby libmysql-ruby \
     libmagick++-dev zip unzip memcached git-core git-svn git-doc \
-    git-cvs irb libxlt-dev libxml2-dev"
+    git-cvs irb libxml2-dev libxslt-dev"
 
 HOSTNAME=`hostname --fqdn`
 GIT_DB_PASS="gitorious"
