@@ -10,9 +10,10 @@
 
 # Nathan Hold - V2 - https://github.com/nhold/
 #	- Code cleanup
-# 	- Working with 12.04
+# 	- Working with 12.04 and latest ruby \ git as of 26\11\12
 #	- Added mime types gem
 #	- Added several libs needed for gem.
+#	- Fixed missing bundle pack
 # Starts with a base 12.04 server installation, no packages/groups added during OS installation.
 # It's best to install the server, then ssh in and run the script because there's a couple of steps
 # that'll be much easier if you can copy/paste.
@@ -181,7 +182,8 @@ HERE
 
 # Configure gitorious:
 cd /var/www/gitorious/ && \
-    bundle install
+    bundle install && \
+    bundle pack
 
 adduser --system --home /var/www/gitorious/ --no-create-home --group --shell /bin/bash git && \
     chown -R git:git /var/www/gitorious
